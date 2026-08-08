@@ -1,9 +1,12 @@
 package org.polyfrost.damagetint.client;
 
+//? if > 1.8.9 {
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+//?}
 import org.polyfrost.compose.render.PolyColor;
 import org.polyfrost.damagetint.DamageTintConstants;
+//? if > 1.8.9
 import org.polyfrost.damagetint.client.utils.OverlayModifier;
 import org.polyfrost.oneconfig.api.config.v1.Config;
 import org.polyfrost.oneconfig.api.config.v1.ConfigManager;
@@ -58,6 +61,7 @@ public class DamageTintConfig extends Config {
     }
 
     public static void updateOverlayColor(PolyColor newColor) {
+       //? if > 1.8.9 {
        Minecraft.getInstance().execute(() -> {
             int argb = enabled ? newColor.getArgb() : defaultColor;
             int r = argb >> 16 & 0xFF;
@@ -69,5 +73,6 @@ public class DamageTintConfig extends Config {
             OverlayTexture overlayTexture = Minecraft.getInstance().gameRenderer.overlayTexture();
             ((OverlayModifier)overlayTexture).damageTint$setOverlayColor(a, r, g, b, enabled && fade);
         });
+        //?}
     }
 }
