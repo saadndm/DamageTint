@@ -59,6 +59,7 @@ repositories {
 
     mavenCentral()
     google()
+    maven("https://repo.saadndm.com/releases")
     maven("https://repo.polyfrost.org/releases") { name = "Polyfrost Releases" }
     maven("https://repo.polyfrost.org/snapshots") { name = "Polyfrost Snapshots" }
     maven("https://central.sonatype.com/repository/maven-snapshots") {

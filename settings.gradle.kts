@@ -9,6 +9,7 @@ pluginManagement {
         maven("https://maven.deftu.dev/releases")
         maven("https://maven.deftu.dev/snapshots")
         maven("https://maven.architectury.dev")
+        maven("https://repo.saadndm.com/releases")
         maven("https://repo.polyfrost.org/releases")
         maven("https://repo.polyfrost.org/snapshots")
         maven("https://jitpack.io/")
